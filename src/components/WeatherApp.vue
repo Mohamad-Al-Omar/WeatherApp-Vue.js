@@ -17,12 +17,13 @@
       </v-col>
       <v-col cols="12" align="center">
         <v-col cols="12" md="4" sm="6">
-          <v-card>
+          <v-card v-show="false">
             <v-card-text>{{ cityName }}</v-card-text>
             <v-card-title class="justify-center">
               {{ temperature }}&#8451;
             </v-card-title>
           </v-card>
+          <v-img  src="../assets/undraw_Weather_app_re_kcb1.svg" />
         </v-col>
       </v-col>
     </v-row>
@@ -45,7 +46,7 @@ export default {
       console.log(this.$axios.baseURL);
       this.$axios
         .get(
-            "weather?q=" +
+          "weather?q=" +
             this.queryText +
             "&appid=c50004d24015a979a7e5a7e84355b95d"
         )
