@@ -14,6 +14,14 @@
           />
         </v-col>
       </v-col>
+      <v-col cols="12" align="center">
+        <v-col cols="12" md="4" sm="6">
+          <v-card>
+            <v-card-text>{{ cityName }}</v-card-text>
+            <v-card-title class="justify-center" > {{temperature}}&#8451; </v-card-title>
+          </v-card>
+        </v-col>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -25,6 +33,8 @@ export default {
     return {
       queryText: "",
       Placeholder: "Enter the city name here...",
+      cityName: "City Name",
+      temperature: 40,
     };
   },
   watch: {
